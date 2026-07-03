@@ -9,6 +9,11 @@ function setLang(l){
   });
   document.getElementById('btn-es').classList.toggle('active', l==='es');
   document.getElementById('btn-en').classList.toggle('active', l==='en');
+  const cv=document.getElementById('cv-download');
+  if(cv){
+    cv.setAttribute('href', l==='es' ? 'CV_ES.pdf' : 'CV_EN.pdf');
+    cv.setAttribute('download', l==='es' ? 'CV_Jose_Luis_Pastor_ES.pdf' : 'CV_Jose_Luis_Pastor_EN.pdf');
+  }
   const ph = l==='es'
     ? {name:'¿Cómo te llamas?', email:'tu@email.com', msg:'Cuéntame sobre tu proyecto...'}
     : {name:'Your name', email:'you@email.com', msg:'Tell me about your project...'};

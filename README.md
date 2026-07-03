@@ -13,7 +13,8 @@ Sitio web personal (una sola página, bilingüe ES/EN) con estética de tecnolog
 │   └── main.js         # Idioma ES/EN, animaciones canvas, formulario
 ├── assets/
 │   └── favicon.svg     # Logo / icono de pestaña
-└── CV.pdf              # CV descargable
+├── CV_ES.pdf           # CV descargable (español)
+└── CV_EN.pdf           # CV descargable (inglés)
 ```
 
 Es un sitio **100% estático**: no necesita build ni servidor. Se puede abrir `index.html` directamente o publicarlo en cualquier hosting estático.
@@ -53,5 +54,5 @@ Cada `git push` a `main` actualiza la web automáticamente.
 
 ## Notas
 
-- El botón "Descargar CV" apunta a `CV.pdf` en la raíz: mantenlo junto al `index.html`.
+- El botón "Descargar CV" descarga `CV_ES.pdf` o `CV_EN.pdf` según el idioma seleccionado en la web: mantén ambos junto al `index.html`.
 - El formulario de contacto abre el cliente de correo del usuario (mailto), no requiere backend.
