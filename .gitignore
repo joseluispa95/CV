@@ -1,0 +1,9 @@
+# Documento fuente privado (no publicar)
+Portfolio.pdf
+
+# OS / editores
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

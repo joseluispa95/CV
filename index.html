@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jose Luis Pastor · GIS &amp; Geospatial Technology Specialist</title>
+<meta name="description" content="Jose Luis Pastor — Especialista GIS enfocado en tecnología geoespacial, gemelos digitales, datos 3D, teledetección y cartografía web.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<canvas id="space-bg"></canvas>
+<div class="bg-gradient"></div>
+
+<nav id="nav">
+  <a href="#top" class="brand">
+    <svg class="logo-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="jlpa" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#4de1ff"/><stop offset=".55" stop-color="#7c5cff"/><stop offset="1" stop-color="#38ffce"/>
+        </linearGradient>
+      </defs>
+      <g stroke="url(#jlpa)" stroke-width="1.1" stroke-linejoin="round" fill="none" opacity=".85">
+        <polygon points="30,8 45.56,14.44 52,30 45.56,45.56 30,52 14.44,45.56 8,30 14.44,14.44"/>
+        <path d="M30 30L30 8M30 30L45.56 14.44M30 30L52 30M30 30L45.56 45.56M30 30L30 52M30 30L14.44 45.56M30 30L8 30M30 30L14.44 14.44"/>
+        <path d="M30 8L52 30M52 30L30 52M30 52L8 30M8 30L30 8" opacity=".4"/>
+      </g>
+      <g class="lm-node" fill="#9fe8ff">
+        <circle cx="30" cy="8" r="2"/><circle cx="45.56" cy="14.44" r="2"/><circle cx="52" cy="30" r="2"/><circle cx="45.56" cy="45.56" r="2"/><circle cx="30" cy="52" r="2"/><circle cx="14.44" cy="45.56" r="2"/><circle cx="8" cy="30" r="2"/><circle cx="14.44" cy="14.44" r="2"/>
+      </g>
+      <circle class="lm-core" cx="30" cy="30" r="3.4" fill="#4de1ff"/>
+    </svg>
+    <span>JL PASTOR</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
+    <a href="#services" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a>
+    <a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+    <div class="lang-toggle">
+      <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <button class="burger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <div class="status reveal in">
+    <span class="live"></span>
+    <span data-es="Disponible · GIS Consultant en Naciones Unidas" data-en="Available · GIS Consultant at the United Nations">Disponible · GIS Consultant en Naciones Unidas</span>
+  </div>
+  <div class="role reveal in" data-es="Especialista GIS · Tecnología Geoespacial" data-en="GIS Specialist · Geospatial Technology">Especialista GIS · Tecnología Geoespacial</div>
+  <h1 class="reveal in">Jose Luis Pastor<br><span class="grad" data-es="Inteligencia geoespacial" data-en="Geospatial intelligence">Inteligencia geoespacial</span></h1>
+  <p class="desc reveal in" data-es="Convierto datos geoespaciales en decisiones. Especialista en GIS 3D, gemelos digitales, cartografía web y análisis de datos, con la mirada puesta en la tecnología espacial y de observación de la Tierra." data-en="I turn geospatial data into decisions. Specialist in 3D GIS, digital twins, web mapping and data analysis, with a focus on space and Earth-observation technology.">Convierto datos geoespaciales en decisiones. Especialista en GIS 3D, gemelos digitales, cartografía web y análisis de datos, con la mirada puesta en la tecnología espacial y de observación de la Tierra.</p>
+  <div class="cta-row reveal in">
+    <a href="#contact" class="btn btn-primary" data-es="Trabajemos juntos" data-en="Let's work together">Trabajemos juntos</a>
+    <a href="CV.pdf" download class="btn btn-ghost">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+      <span data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
+    </a>
+  </div>
+  <span class="eyebrow reveal in" style="margin-top:44px;margin-bottom:0" data-es="Actualmente" data-en="Currently">Actualmente</span>
+  <div class="hero-stats reveal in" style="margin-top:18px">
+    <div class="stat"><div class="n">7<span>+</span></div><div class="l" data-es="Años en GIS" data-en="Years in GIS">Años en GIS</div></div>
+    <div class="stat"><div class="n">3D</div><div class="l" data-es="Gemelos digitales" data-en="Digital twins">Gemelos digitales</div></div>
+    <div class="stat"><div class="n">UN</div><div class="l" data-es="Naciones Unidas" data-en="United Nations">Naciones Unidas</div></div>
+    <div class="stat"><div class="n">ESRI</div><div class="l" data-es="Ecosistema ESRI" data-en="ESRI ecosystem">Ecosistema ESRI</div></div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <span class="eyebrow" data-es="Sobre mí" data-en="About me">Sobre mí</span>
+  <h2 class="title" data-es="Tecnología geoespacial con propósito" data-en="Geospatial technology with purpose">Tecnología geoespacial con propósito</h2>
+  <p class="lead" data-es="Soy Jose Luis, especialista GIS y, sobre todo, alguien que disfruta poniendo la tecnología al servicio de las personas y de las decisiones que importan. A lo largo de mi carrera —de las energías renovables a los organismos internacionales— he aprendido que mi mayor valor está en hacer de puente entre el negocio y la tecnología: escuchar un reto, entender qué se necesita de verdad y convertirlo en soluciones geoespaciales claras y orientadas a la acción. Me apasiona el mundo geoespacial y creo firmemente en el poder del GIS para generar un impacto positivo en cualquier ámbito. Hoy enfoco mi trabajo en la consultoría de proyectos con impacto real, donde los datos dejan de ser cifras para convertirse en mejores decisiones." data-en="I'm Jose Luis, a GIS specialist and, above all, someone who loves putting technology to work for people and the decisions that matter. Across my career —from renewable energy to international organizations— I've learned that my greatest strength is bridging business and technology: listening to a challenge, understanding what's truly needed, and turning it into clear, action-oriented geospatial solutions. I'm passionate about the geospatial world and I firmly believe in the power of GIS to create positive impact in any field. Today I focus on consulting for projects with real impact, where data stops being numbers and becomes better decisions.">Soy Jose Luis, especialista GIS y, sobre todo, alguien que disfruta poniendo la tecnología al servicio de las personas y de las decisiones que importan. A lo largo de mi carrera —de las energías renovables a los organismos internacionales— he aprendido que mi mayor valor está en hacer de puente entre el negocio y la tecnología: escuchar un reto, entender qué se necesita de verdad y convertirlo en soluciones geoespaciales claras y orientadas a la acción. Me apasiona el mundo geoespacial y creo firmemente en el poder del GIS para generar un impacto positivo en cualquier ámbito. Hoy enfoco mi trabajo en la consultoría de proyectos con impacto real, donde los datos dejan de ser cifras para convertirse en mejores decisiones.</p>
+
+  <div class="skills-wrap">
+    <div>
+      <div class="skill"><div class="top"><span data-es="GIS &amp; ecosistema Esri" data-en="GIS &amp; Esri ecosystem">GIS &amp; ecosistema Esri</span><span data-es="Experto" data-en="Expert">Experto</span></div><div class="bar"><i data-w="95"></i></div></div>
+      <div class="skill"><div class="top"><span data-es="Análisis &amp; visualización de datos" data-en="Data analysis &amp; visualization">Análisis &amp; visualización de datos</span><span data-es="Experto" data-en="Expert">Experto</span></div><div class="bar"><i data-w="95"></i></div></div>
+      <div class="skill"><div class="top"><span data-es="Teledetección" data-en="Remote sensing">Teledetección</span><span data-es="Intermedio" data-en="Intermediate">Intermedio</span></div><div class="bar"><i data-w="75"></i></div></div>
+    </div>
+    <div>
+      <div class="skill"><div class="top"><span>Python</span><span data-es="Medio/Alto" data-en="Medium/High">Medio/Alto</span></div><div class="bar"><i data-w="86"></i></div></div>
+      <div class="skill"><div class="top"><span>SQL</span><span data-es="Medio" data-en="Medium">Medio</span></div><div class="bar"><i data-w="72"></i></div></div>
+    </div>
+  </div>
+
+  <div class="tech-tags">
+    <span class="tt-label" data-es="Stack" data-en="Stack">Stack</span>
+    <span class="tt">Esri Suite</span><span class="tt">QGIS</span><span class="tt">Google Cloud</span>
+  </div>
+  <div class="tech-tags">
+    <span class="tt-label" data-es="Satélites" data-en="Satellites">Satélites</span>
+    <span class="tt sat">Sentinel</span><span class="tt sat">Landsat</span><span class="tt sat">Planet</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="reveal">
+  <span class="eyebrow" data-es="Qué ofrezco" data-en="What I offer">Qué ofrezco</span>
+  <h2 class="title" data-es="Servicios geoespaciales" data-en="Geospatial services">Servicios geoespaciales</h2>
+  <p class="lead" data-es="Soluciones end-to-end que combinan tecnología GIS, análisis de datos y observación de la Tierra." data-en="End-to-end solutions combining GIS technology, data analysis and Earth observation.">Soluciones end-to-end que combinan tecnología GIS, análisis de datos y observación de la Tierra.</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div>
+      <h3 data-es="Location Intelligence" data-en="Location Intelligence">Location Intelligence</h3>
+      <p data-es="Transformo datos de localización en decisiones de negocio: estudios de mercado, selección de emplazamientos, análisis sociodemográfico y de competencia e índices de potencial para guiar la expansión." data-en="I turn location data into business decisions: market studies, site selection, sociodemographic and competition analysis, and potential indices to guide expansion.">Transformo datos de localización en decisiones de negocio: estudios de mercado, selección de emplazamientos, análisis sociodemográfico y de competencia e índices de potencial para guiar la expansión.</p>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/><path d="M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+      <h3 data-es="Automatización de procesos geoespaciales" data-en="Geospatial Process Automation">Automatización de procesos geoespaciales</h3>
+      <p data-es="Diseño de workflows y automatización de procesos con Python y la nube (Google Cloud, ArcGIS y otras plataformas) para ganar eficiencia, escalabilidad y consistencia en los datos." data-en="Workflow design and process automation with Python and the cloud (Google Cloud, ArcGIS and other platforms) for efficiency, scalability and data consistency.">Diseño de workflows y automatización de procesos con Python y la nube (Google Cloud, ArcGIS y otras plataformas) para ganar eficiencia, escalabilidad y consistencia en los datos.</p>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 9v11"/></svg></div>
+      <h3 data-es="Mantenimiento de BBDD geoespaciales" data-en="Geospatial Database Maintenance">Mantenimiento de BBDD geoespaciales</h3>
+      <p data-es="Gestión y administración de bases de datos geoespaciales corporativas —desde entornos ArcGIS Enterprise hasta soluciones en la nube como Google Cloud— garantizando rendimiento, integridad y alta disponibilidad." data-en="Management and administration of corporate geospatial databases —from ArcGIS Enterprise environments to cloud solutions like Google Cloud— ensuring performance, integrity and high availability.">Gestión y administración de bases de datos geoespaciales corporativas —desde entornos ArcGIS Enterprise hasta soluciones en la nube como Google Cloud— garantizando rendimiento, integridad y alta disponibilidad.</p>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg></div>
+      <h3 data-es="Desarrollo de aplicaciones GIS" data-en="GIS Application Development">Desarrollo de aplicaciones GIS</h3>
+      <p data-es="Aplicaciones a medida con Experience Builder, Dashboards, FieldMaps y Survey123 para operaciones, trabajo de campo y toma de decisiones." data-en="Custom apps with Experience Builder, Dashboards, FieldMaps and Survey123 for operations, field work and decision-making.">Aplicaciones a medida con Experience Builder, Dashboards, FieldMaps y Survey123 para operaciones, trabajo de campo y toma de decisiones.</p>
+    </div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg></div>
+      <h3 data-es="Cartografía web y gemelos digitales" data-en="Web Mapping &amp; Digital Twins">Cartografía web y gemelos digitales</h3>
+      <p data-es="Diseño y publicación de mapas web 2D/3D, geoportales y gemelos digitales a partir de datos 3D, LIDAR e imágenes de dron." data-en="Design and publishing of 2D/3D web maps, geoportals and digital twins from 3D data, LIDAR and drone imagery.">Diseño y publicación de mapas web 2D/3D, geoportales y gemelos digitales a partir de datos 3D, LIDAR e imágenes de dron.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+  <span class="eyebrow" data-es="Trayectoria" data-en="Journey">Trayectoria</span>
+  <h2 class="title" data-es="Experiencia profesional" data-en="Professional experience">Experiencia profesional</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="when">2026 — <span data-es="Presente" data-en="Present">Presente</span></div>
+      <h3 data-es="Consultor GIS" data-en="GIS Consultant">Consultor GIS</h3>
+      <div class="org">United Nations</div>
+      <ul>
+        <li data-es="Consultoría técnica y estratégica en el desarrollo de productos GIS 3D." data-en="Technical and strategic consulting in the development of 3D GIS products.">Consultoría técnica y estratégica en el desarrollo de productos GIS 3D.</li>
+        <li data-es="Creación y publicación de mapas web 2D y 3D, operacionales y de cartografía base." data-en="Creation and publishing of 2D and 3D web maps, operational and base cartography.">Creación y publicación de mapas web 2D y 3D, operacionales y de cartografía base.</li>
+        <li data-es="Procesado de imágenes de dron para generar mallas 3D como parte del servicio Digital Twin." data-en="Processing drone imagery to generate 3D meshes as part of the Digital Twin service.">Procesado de imágenes de dron para generar mallas 3D como parte del servicio Digital Twin.</li>
+        <li data-es="Desarrollo de la estrategia de gobernanza de contenido del geoportal." data-en="Development of the geoportal content governance strategy.">Desarrollo de la estrategia de gobernanza de contenido del geoportal.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="when">2023 — 2026</div>
+      <h3 data-es="Brownfield GIS Business Lead" data-en="Brownfield GIS Business Lead">Brownfield GIS Business Lead</h3>
+      <div class="org">Capital Energy / Kynegos</div>
+      <ul>
+        <li data-es="Gestión y administración de la base de datos geoespacial corporativa y del entorno ArcGIS Enterprise." data-en="Management of the corporate geospatial database and ArcGIS Enterprise environment.">Gestión y administración de la base de datos geoespacial corporativa y del entorno ArcGIS Enterprise.</li>
+        <li data-es="Garantía de rendimiento óptimo y alta disponibilidad del sistema." data-en="Ensuring optimal system performance and high availability.">Garantía de rendimiento óptimo y alta disponibilidad del sistema.</li>
+        <li data-es="Desarrollo y evolución de soluciones GIS alineadas con las necesidades de la organización." data-en="Developing and evolving GIS solutions aligned with organizational needs.">Desarrollo y evolución de soluciones GIS alineadas con las necesidades de la organización.</li>
+        <li data-es="Coordinación entre departamentos y soporte estratégico mediante análisis geoespacial." data-en="Cross-department coordination and strategic support through geospatial analysis.">Coordinación entre departamentos y soporte estratégico mediante análisis geoespacial.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="when">2021 — 2023</div>
+      <h3 data-es="Técnico GIS · Desarrollo de Negocio" data-en="GIS Technician · Business Development">Técnico GIS · Desarrollo de Negocio</h3>
+      <div class="org">Esri Spain</div>
+      <ul>
+        <li data-es="Creación y preparación de datasets en múltiples proyectos orientados a negocio, transformando datos en información lista para el análisis." data-en="Creating and preparing datasets across multiple business-oriented projects, turning raw data into analysis-ready information.">Creación y preparación de datasets en múltiples proyectos orientados a negocio, transformando datos en información lista para el análisis.</li>
+        <li data-es="Producción de contenido cartográfico para el Esri Living Atlas." data-en="Producing cartographic content for the Esri Living Atlas.">Producción de contenido cartográfico para el Esri Living Atlas.</li>
+        <li data-es="Técnico de Desarrollo de Negocio en iniciativas estratégicas con tecnología Esri." data-en="Business Development Technician on strategic initiatives involving Esri technology.">Técnico de Desarrollo de Negocio en iniciativas estratégicas con tecnología Esri.</li>
+      </ul>
+    </div>
+    <div class="tl-item">
+      <div class="when">2019 — 2021</div>
+      <h3 data-es="Analista GIS · Desarrollo de Negocio" data-en="GIS Analyst · Business Development">Analista GIS · Desarrollo de Negocio</h3>
+      <div class="org">JeffApp</div>
+      <ul>
+        <li data-es="Estudios de mercado con datos sociodemográficos para la expansión de franquicias en varios países." data-en="Market studies with sociodemographic data to support franchise expansion in several countries.">Estudios de mercado con datos sociodemográficos para la expansión de franquicias en varios países.</li>
+        <li data-es="Mantenimiento y actualización de bases cartográficas para las marcas de Jeff." data-en="Maintaining and updating cartographic databases for the Jeff brands.">Mantenimiento y actualización de bases cartográficas para las marcas de Jeff.</li>
+        <li data-es="Automatización de procesos cartográficos para mejorar eficiencia y consistencia." data-en="Automation of cartographic processes to improve efficiency and consistency.">Automatización de procesos cartográficos para mejorar eficiencia y consistencia.</li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="eyebrow" style="margin-top:70px" data-es="Formación" data-en="Education">Formación</span>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="tl-item" style="padding:0"><div class="when" style="position:static">2014 — 2019</div></div>
+      <h3 style="margin-top:8px" data-es="Ing. en Geomática y Topografía" data-en="Geomatics &amp; Surveying Engineering">Ing. en Geomática y Topografía</h3>
+      <p style="color:var(--accent);margin:4px 0 10px" data-es="Universidad Politécnica de Valencia" data-en="Polytechnic University of Valencia">Universidad Politécnica de Valencia</p>
+      <p data-es="Grado en Ingeniería en Geomática y Topografía." data-en="Bachelor's Degree in Geomatics Engineering and Surveying.">Grado en Ingeniería en Geomática y Topografía.</p>
+    </div>
+    <div class="card">
+      <div class="tl-item" style="padding:0"><div class="when" style="position:static">2020 — 2021</div></div>
+      <h3 style="margin-top:8px" data-es="Máster en Tecnología Esri" data-en="Master's in Esri Technology">Máster en Tecnología Esri</h3>
+      <p style="color:var(--accent);margin:4px 0 10px">Esri Spain</p>
+      <p data-es="Estudio en profundidad del ecosistema ArcGIS con proyectos 2D, 3D y Utility Network." data-en="In-depth study of the ArcGIS ecosystem with 2D, 3D and Utility Network projects.">Estudio en profundidad del ecosistema ArcGIS con proyectos 2D, 3D y Utility Network.</p>
+    </div>
+    <div class="card">
+      <div class="tl-item" style="padding:0"><div class="when" style="position:static">LISA</div></div>
+      <h3 style="margin-top:8px" data-es="Análisis internacional y geopolítica" data-en="International Analysis &amp; Geopolitics">Análisis internacional y geopolítica</h3>
+      <p style="color:var(--accent);margin:4px 0 10px">LISA Institute</p>
+      <p data-es="Formación en análisis internacional y geopolítica." data-en="Training in international analysis and geopolitics.">Formación en análisis internacional y geopolítica.</p>
+    </div>
+  </div>
+
+  <span class="eyebrow" style="margin-top:70px" data-es="Certificaciones &amp; diplomas" data-en="Certifications &amp; diplomas">Certificaciones &amp; diplomas</span>
+  <div class="grid grid-3">
+    <div class="card prog">
+      <div class="chip-prog"><span class="live"></span><span data-es="En proceso" data-en="In progress">En proceso</span></div>
+      <h3 style="margin-top:14px" data-es="Inteligencia de Imágenes" data-en="Image Intelligence">Inteligencia de Imágenes</h3>
+      <p style="color:var(--accent);margin:4px 0 10px">Lisa Institute</p>
+      <p data-es="Curso en curso sobre inteligencia de imágenes: análisis e interpretación de imagen para inteligencia y toma de decisiones." data-en="Ongoing course on image intelligence: image analysis and interpretation for intelligence and decision-making.">Curso en curso sobre inteligencia de imágenes: análisis e interpretación de imagen para inteligencia y toma de decisiones.</p>
+    </div>
+    <div class="card">
+      <div class="tl-item" style="padding:0"><div class="when" style="position:static">ESRI</div></div>
+      <h3 style="margin-top:8px" data-es="Tratamiento de imágenes con ArcGIS Pro" data-en="Image processing with ArcGIS Pro">Tratamiento de imágenes con ArcGIS Pro</h3>
+      <p style="color:var(--accent);margin:4px 0 10px" data-es="Esri España · Teledetección" data-en="Esri Spain · Remote sensing">Esri España · Teledetección</p>
+      <p data-es="Diploma en teledetección e imagen: procesado y análisis de imágenes satélite y aéreas con ArcGIS Pro." data-en="Diploma in remote sensing and imagery: processing and analysis of satellite and aerial imagery with ArcGIS Pro.">Diploma en teledetección e imagen: procesado y análisis de imágenes satélite y aéreas con ArcGIS Pro.</p>
+      <a class="clink" href="https://www.linkedin.com/posts/jose-luis-pastor-alemany-b6a732140_esri-arcgis-gis-activity-7046845257346363394-0jDm" target="_blank" rel="noopener"><span data-es="Ver diploma" data-en="View diploma">Ver diploma</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="card">
+      <div class="tl-item" style="padding:0"><div class="when" style="position:static">GEO UNIV.</div></div>
+      <h3 style="margin-top:8px" data-es="Spatial Data Viz &amp; ML en Python" data-en="Spatial Data Viz &amp; ML in Python">Spatial Data Viz &amp; ML en Python</h3>
+      <p style="color:var(--accent);margin:4px 0 10px">Geo University</p>
+      <p data-es="Diploma en visualización de datos espaciales y machine learning aplicado con Python." data-en="Diploma in spatial data visualization and applied machine learning with Python.">Diploma en visualización de datos espaciales y machine learning aplicado con Python.</p>
+      <a class="clink" href="https://www.credential.net/8848db95-9762-4286-82e3-2fa0ee5322e1" target="_blank" rel="noopener"><span data-es="Ver certificado" data-en="View certificate">Ver certificado</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <span class="eyebrow" data-es="Portfolio" data-en="Portfolio">Portfolio</span>
+  <h2 class="title" data-es="Proyectos destacados" data-en="Featured projects">Proyectos destacados</h2>
+  <p class="lead" data-es="Una selección de trabajos reales en GIS 3D, teledetección, análisis y visualización de datos." data-en="A selection of real work across 3D GIS, remote sensing, analysis and data visualization.">Una selección de trabajos reales en GIS 3D, teledetección, análisis y visualización de datos.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <canvas class="visual" data-viz="mesh"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">3D · LIDAR · ArcGIS Pro</div>
+      <h3 data-es="Visualización 3D de San Fermines" data-en="3D San Fermines Visualization">Visualización 3D de San Fermines</h3>
+      <p data-es="Entorno urbano 3D integrando datos públicos (IGN, Catastro, 3D Warehouse) y LIDAR, con escenas interactivas publicadas como InstantApp de Esri." data-en="3D urban environment integrating public data (IGN, Cadastre, 3D Warehouse) and LIDAR, with interactive scenes published as an Esri InstantApp.">Entorno urbano 3D integrando datos públicos (IGN, Catastro, 3D Warehouse) y LIDAR, con escenas interactivas publicadas como InstantApp de Esri.</p>
+      <a class="plink" href="https://blog.esri.es/entrada-de-blog/vive-los-sanfermines-en-3d/" target="_blank" rel="noopener"><span data-es="Ver proyecto" data-en="View project">Ver proyecto</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="grid"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">Experience Builder · NDVI</div>
+      <h3 data-es="Prevención de incendios forestales" data-en="Wildfire prevention">Prevención de incendios forestales</h3>
+      <p data-es="Análisis de riesgo con imagen satélite y NDVI, trabajo de campo con FieldMaps y dashboards operacionales para seguimiento en tiempo real." data-en="Risk analysis with satellite imagery and NDVI, field work via FieldMaps and operational dashboards for real-time tracking.">Análisis de riesgo con imagen satélite y NDVI, trabajo de campo con FieldMaps y dashboards operacionales para seguimiento en tiempo real.</p>
+      <a class="plink" href="https://experience.arcgis.com/experience/ed6aadf87a234eaab73b46f030b0a5df/page/Inicio" target="_blank" rel="noopener"><span data-es="Ver proyecto" data-en="View project">Ver proyecto</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="globe"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">StoryMaps · Día del Agua</div>
+      <h3 data-es="Calidad del agua subterránea" data-en="Groundwater quality">Calidad del agua subterránea</h3>
+      <p data-es="StoryMap interactiva con datos de calidad de aguas y zonas vulnerables por nitratos, con dashboard conectado como herramienta de apoyo a la decisión." data-en="Interactive StoryMap on water quality and nitrate-vulnerable zones, with a connected dashboard as a decision-support tool.">StoryMap interactiva con datos de calidad de aguas y zonas vulnerables por nitratos, con dashboard conectado como herramienta de apoyo a la decisión.</p>
+      <a class="plink" href="https://storymaps.arcgis.com/stories/4f28f35c78af43bc9284da472e27327b" target="_blank" rel="noopener"><span data-es="Ver proyecto" data-en="View project">Ver proyecto</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="mesh"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">Dashboards · Energía renovable</div>
+      <h3 data-es="Seguimiento de adquisición de terrenos" data-en="Land acquisition tracking">Seguimiento de adquisición de terrenos</h3>
+      <p data-es="Flujo GIS y dashboards interactivos para monitorizar la contratación catastral de parques eólicos y solares, integrando datos catastrales, geometrías y estado de contratos." data-en="GIS workflow and interactive dashboards to monitor cadastral land acquisition for wind and solar farms, integrating cadastral data, geometries and contract status.">Flujo GIS y dashboards interactivos para monitorizar la contratación catastral de parques eólicos y solares, integrando datos catastrales, geometrías y estado de contratos.</p>
+      <div class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6L5.7 21 8 14 2 9.6h7.6z"/></svg><span data-es="Ponente · Esri Conference 2024" data-en="Speaker · Esri Conference 2024">Ponente · Esri Conference 2024</span></div>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="grid"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">Market Intelligence</div>
+      <h3 data-es="Estudios de localización y mercado" data-en="Site selection &amp; market studies">Estudios de localización y mercado</h3>
+      <p data-es="Índices de potencial basados en POI, densidad de población, mercado objetivo sociodemográfico y competencia, para decisiones de expansión de franquicias." data-en="Potential indices from POI, population density, sociodemographic target market and competition, driving franchise expansion decisions.">Índices de potencial basados en POI, densidad de población, mercado objetivo sociodemográfico y competencia, para decisiones de expansión de franquicias.</p>
+      <a class="plink" href="https://medium.com/@jeffapp.com/mapping-and-visualizing-jeffs-revolution-75a1293ec671" target="_blank" rel="noopener"><span data-es="Leer artículo" data-en="Read article">Leer artículo</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="globe"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">Data Viz · Dashboards</div>
+      <h3 data-es="Análisis global de terremotos" data-en="Global earthquake analysis">Análisis global de terremotos</h3>
+      <p data-es="Dashboard con la distribución mundial de terremotos (1965–2016): magnitud media y máxima, frecuencia por año y predicción de tendencia." data-en="Dashboard with the global distribution of earthquakes (1965–2016): average and maximum magnitude, yearly frequency and trend prediction.">Dashboard con la distribución mundial de terremotos (1965–2016): magnitud media y máxima, frecuencia por año y predicción de tendencia.</p>
+    </div>
+    <div class="proj">
+      <canvas class="visual" data-viz="grid"></canvas>
+      <div class="grad-overlay"></div>
+      <div class="tag">Infografías · Data Viz</div>
+      <h3 data-es="Infografías y visualización de datos" data-en="Infographics &amp; data visualization">Infografías y visualización de datos</h3>
+      <p data-es="Producción de infografías y visualizaciones en múltiples formatos: pirámides de población, estratos sociales y análisis de áreas metropolitanas." data-en="Production of infographics and visualizations in multiple formats: population pyramids, social strata and metropolitan-area analysis.">Producción de infografías y visualizaciones en múltiples formatos: pirámides de población, estratos sociales y análisis de áreas metropolitanas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <span class="eyebrow" data-es="Contacto" data-en="Contact">Contacto</span>
+  <h2 class="title" data-es="Pongamos tu proyecto en órbita" data-en="Let's put your project in orbit">Pongamos tu proyecto en órbita</h2>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <p class="lead" style="margin-bottom:14px" data-es="¿Tienes un reto geoespacial o de tecnología espacial? Hablemos." data-en="Have a geospatial or space-tech challenge? Let's talk.">¿Tienes un reto geoespacial o de tecnología espacial? Hablemos.</p>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <div><div class="l">Email</div><a href="mailto:joseluispastoralemany@gmail.com">joseluispastoralemany@gmail.com</a></div>
+      </div>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.6 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.5 2.8.6a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="l" data-es="Teléfono" data-en="Phone">Teléfono</div><a href="tel:+34667280096">+34 667 280 096</a></div>
+      </div>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="l" data-es="Ubicación" data-en="Location">Ubicación</div><span class="v">Valencia, España</span></div>
+      </div>
+      <div class="ci">
+        <div class="ico"><svg viewBox="0 0 24 24" style="fill:var(--accent);stroke:none"><path d="M4.98 3.5A2.5 2.5 0 002.5 6 2.5 2.5 0 005 6 2.5 2.5 0 004.98 3.5zM3 8.98h4V21H3zM9.5 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg></div>
+        <div><div class="l">LinkedIn</div><a href="https://www.linkedin.com/in/jose-luis-pastor-alemany-b6a732140/" target="_blank" rel="noopener">jose-luis-pastor-alemany</a></div>
+      </div>
+    </div>
+    <form id="contactForm" onsubmit="return sendMail(event)">
+      <label data-es="Nombre" data-en="Name">Nombre</label>
+      <input type="text" id="f-name" required placeholder="...">
+      <label data-es="Tu email" data-en="Your email">Tu email</label>
+      <input type="email" id="f-email" required placeholder="...">
+      <label data-es="Mensaje" data-en="Message">Mensaje</label>
+      <textarea id="f-msg" rows="4" required placeholder="..."></textarea>
+      <button type="submit" class="btn btn-primary" data-es="Enviar mensaje →" data-en="Send message →">Enviar mensaje →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">JOSE LUIS PASTOR</div>
+  <p data-es="Especialista GIS · Tecnología Geoespacial · Valencia, España" data-en="GIS Specialist · Geospatial Technology · Valencia, Spain">Especialista GIS · Tecnología Geoespacial · Valencia, España</p>
+  <p style="margin-top:8px;font-size:12px;opacity:.7">© <span id="year"></span> · <a href="mailto:joseluispastoralemany@gmail.com">joseluispastoralemany@gmail.com</a> · <a href="https://www.linkedin.com/in/jose-luis-pastor-alemany-b6a732140/" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
